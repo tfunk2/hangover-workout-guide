@@ -4,6 +4,14 @@ import DrinkForm from "./Components/DrinkForm"
 
 class App extends Component{
 
+  state = {
+    workouts: []
+  }
+
+  fillWorkoutSuggestionsContainer(workoutSuggestions) {
+    this.setState({workoutSuggestions: workoutSuggestions})
+  }
+
   render() {
     return (
       <div className="App">
