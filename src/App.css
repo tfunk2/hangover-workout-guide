@@ -1,0 +1,44 @@
+
+#drink-quantity {
+    background-color: white;
+    border-color: black;
+}
+
+#drink-submit {
+    margin-left: 20px;
+    background-color: white;
+    border-color: black;
+}
+
+#drink-label {
+    margin-left: 20px;
+}
+
+.drink-dropdown {
+    margin-left: 20px;
+    position: relative;
+    border-color: black;
+}
+.drink-dropdown:before {
+    background-color: white;
+    content: "";
+    position: absolute;
+    right: 10px;
+    top: 8px;
+    width: 0; 
+    height: 0; 
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-top: 10px solid #f00;
+}
+.drink-dropdown:after {
+    content: "";
+    position: absolute;
+    right: 10px;
+    top: 3px;
+    width: 0; 
+    height: 0; 
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-top: 10px solid #333;
+}
