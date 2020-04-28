@@ -1,4 +1,12 @@
 
+.App {
+    display: flex;
+    flex-direction: column;
+    /* justify-content: center; */
+    /* text-align: center; */
+    align-items: center;
+}
+
 #drink-quantity {
     background-color: white;
     border-color: black;
@@ -41,4 +49,65 @@
     border-left: 10px solid transparent;
     border-right: 10px solid transparent;
     border-top: 10px solid #333;
+}
+
+#welcome {
+    text-align: center;
+}
+
+#suggestions-title {
+    width: 400px;
+    text-align: center;
+}
+
+#workout-suggestion-ul {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+#workout-suggestion-div {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+li {
+    background-image: url('https://previews.123rf.com/images/olivierl/olivierl1111/olivierl111100001/11126840-old-and-distressed-antique-board-made-of-barn-wood-plank-with-rough-weathered-textured-grain-grunge-.jpg');
+    border-radius: 6px;
+    margin: 20px;
+    padding: 10px;
+    text-align: center;
+    box-shadow: rgb(36, 36, 36) 2px 2px 2px 2px;
+    list-style-type: none;
+}
+
+#workout-suggestion-ul h2, p {
+    background-color: rgba(179, 164, 115, 0.575);
+    border-radius: 6px;
+}
+
+p {
+    padding-left: 6px;
+    padding-right: 6px;
+}
+
+#workout-suggestion-div {
+    background-image: url('https://i.pinimg.com/originals/ef/c6/02/efc602081b94ce1e95d9bcae1773995f.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.drink-form {
+    margin-bottom: 20px;
+}
+
+body {
+    font-family: 'Oswald', sans-serif;
+    background-color: rgb(236, 207, 112);
+}
+
+#welcome {
+    font-size: 46pt;
 }
