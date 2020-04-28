@@ -3,13 +3,15 @@ import WorkoutSuggestion from './WorkoutSuggestion'
 
 export default function WorkoutSuggestionsContainer(props) {
 
+    const workoutSuggestionsTitle = props.workoutSuggestionsTitle()
+
     const makeWorkoutSuggestions = props.workouts.map(workout => {
-        return <WorkoutSuggestion workout={workout}/>
+        return <WorkoutSuggestion key={workout.id} workout={workout}/>
     })
 
     return (
         <div className="WorkoutSuggestionsContainer">
-            <h1>Do these workouts to burn off those calories!</h1>
+            {workoutSuggestionsTitle}
             <ul>
                 {makeWorkoutSuggestions}
             </ul>
