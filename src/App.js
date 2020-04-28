@@ -2,13 +2,14 @@ import React, { Component } from 'react';
 import './App.css';
 import DrinkForm from "./components/DrinkForm"
 import WorkoutSuggestionsContainer from "./components/WorkoutSuggestionsContainer"
+import Welcome from "./components/Welcome"
 
 class App extends Component{
 
   state = {
     workouts: [],
     drinks: [],
-    totalCalories: 0
+    totalCalories: null
   }
 
   componentDidMount() {
@@ -27,7 +28,7 @@ class App extends Component{
 
   calorieConditionals = (totalCalories) => {
     return this.state.workouts.filter(workout => {
-      return workout.calories >= (Math.floor(totalCalories/100)*100) && workout.calories < totalCalories + 300
+      return workout.calories >= (Math.floor(totalCalories/100)*100) && workout.calories < totalCalories + 150
     })
 }
 
@@ -36,13 +37,13 @@ class App extends Component{
   }
 
   workoutSuggestionsTitle = () => {
-    return <h1>Do one of these activities for an hour to burn off {this.state.totalCalories} empty calories!</h1>
+    return <h1 id="suggestions-title">Do one of these activities for an hour to burn off <br></br>{this.state.totalCalories} empty calories!</h1>
   }
 
   render() {
     return (
       <div className="App">
-        <h1>Welcome</h1>
+        <Welcome />
         <DrinkForm workoutSuggestionsTitle={this.workoutSuggestionsTitle} setTotalCalories={this.setTotalCalories} drinks={this.state.drinks} totalCalories={this.state.totalCalories}/>
         <WorkoutSuggestionsContainer workoutSuggestionsTitle={this.workoutSuggestionsTitle} workouts={this.calorieConditionals(this.state.totalCalories)}/>
       </div>

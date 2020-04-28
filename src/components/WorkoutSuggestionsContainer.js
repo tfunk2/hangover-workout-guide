@@ -11,8 +11,10 @@ export default function WorkoutSuggestionsContainer(props) {
 
     return (
         <div className="WorkoutSuggestionsContainer">
-            {workoutSuggestionsTitle}
-            <ul>
+            <div id="workout-suggestion-div">
+                {workoutSuggestionsTitle}
+            </div>
+            <ul id="workout-suggestion-ul">
                 {makeWorkoutSuggestions}
             </ul>
         </div>
